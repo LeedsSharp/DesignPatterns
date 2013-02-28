@@ -1,4 +1,5 @@
 ﻿using NUnit.Framework;
+using StrategyPattern.Tests.Strategies;
 
 namespace StrategyPattern.Tests
 {
@@ -11,7 +12,8 @@ namespace StrategyPattern.Tests
         public void CalculateDeliveryCost_with_Royal_Mail_Order_returns_199()
         {
             // Arrange
-            var deliveryService = new SwitchDeliveryService();
+            var strategy = new RoyalMailCostStrategy();
+            var deliveryService = new StrategyDeliveryService(strategy);
             var order = OrderFactory.CreateRoyalMailOrder();
 
             // Act
@@ -25,7 +27,8 @@ namespace StrategyPattern.Tests
         public void CalculateDeliveryCost_with_TNT_Order_returns_578()
         {
             // Arrange
-            var deliveryService = new SwitchDeliveryService();
+            var strategy = new TNTCostStrategy();
+            var deliveryService = new StrategyDeliveryService(strategy);
             var order = OrderFactory.CreateTNTOrder();
 
             // Act
@@ -39,7 +42,8 @@ namespace StrategyPattern.Tests
         public void CalculateDeliveryCost_with_DHL_Order_returns_749()
         {
             // Arrange
-            var deliveryService = new SwitchDeliveryService();
+            var strategy = new DHLCostStrategy();
+            var deliveryService = new StrategyDeliveryService(strategy);
             var order = OrderFactory.CreateDHLOrder();
 
             // Act

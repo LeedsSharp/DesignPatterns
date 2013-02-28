@@ -45,10 +45,15 @@
   <ItemGroup>
     <Compile Include="DeliverySerivceTests.cs" />
     <Compile Include="DeliveryService.cs" />
+    <Compile Include="IDeliveryCostStrategy.cs" />
     <Compile Include="IDeliveryService.cs" />
     <Compile Include="Order.cs" />
     <Compile Include="OrderFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Strategies\DHLCostStrategy.cs" />
+    <Compile Include="Strategies\RoyalMailCostStrategy.cs" />
+    <Compile Include="Strategies\TNTCostStrategy.cs" />
+    <Compile Include="StrategyDeliveryService.cs" />
     <Compile Include="SwitchDeliveryService.cs" />
     <Compile Include="UnknownDeliveryMethodException.cs" />
   </ItemGroup>
