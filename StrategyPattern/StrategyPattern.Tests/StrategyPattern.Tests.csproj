@@ -45,9 +45,12 @@
   <ItemGroup>
     <Compile Include="DeliverySerivceTests.cs" />
     <Compile Include="DeliveryService.cs" />
+    <Compile Include="IDeliveryService.cs" />
     <Compile Include="Order.cs" />
     <Compile Include="OrderFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SwitchDeliveryService.cs" />
+    <Compile Include="UnknownDeliveryMethodException.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

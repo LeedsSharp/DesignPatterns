@@ -11,7 +11,7 @@ namespace StrategyPattern.Tests
         public void CalculateDeliveryCost_with_Royal_Mail_Order_returns_199()
         {
             // Arrange
-            var deliveryService = new DeliveryService();
+            var deliveryService = new SwitchDeliveryService();
             var order = OrderFactory.CreateRoyalMailOrder();
 
             // Act
@@ -25,7 +25,7 @@ namespace StrategyPattern.Tests
         public void CalculateDeliveryCost_with_TNT_Order_returns_578()
         {
             // Arrange
-            var deliveryService = new DeliveryService();
+            var deliveryService = new SwitchDeliveryService();
             var order = OrderFactory.CreateTNTOrder();
 
             // Act
@@ -39,7 +39,7 @@ namespace StrategyPattern.Tests
         public void CalculateDeliveryCost_with_DHL_Order_returns_749()
         {
             // Arrange
-            var deliveryService = new DeliveryService();
+            var deliveryService = new SwitchDeliveryService();
             var order = OrderFactory.CreateDHLOrder();
 
             // Act
